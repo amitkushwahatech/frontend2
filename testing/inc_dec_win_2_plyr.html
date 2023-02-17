@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>User 1</p>
+    <input type="button" value="Click me" id="user1">
+    <div id="user1-point"></div>
+    <p>User 2</p>
+    <input type="button" value="Click me" id="user2">
+    <div id="user2-point"></div>
+    <script>
+        const user1 = document.querySelector('#user1');
+        const user2 = document.querySelector('#user2');
+        const user1Point = document.querySelector('#user1-point');
+        const user2Point = document.querySelector('#user2-point');
+
+        user1.addEventListener('click',increaseDecrease1);
+        user2.addEventListener('click',increaseDecrease2);
+        let count = 0;
+        let count2 = 0;
+        function increaseDecrease1() {
+            user1Point.innerHTML = ++count;
+            user2Point.innerHTML = --count2;
+            if(count===10){
+                alert('player1 wins');
+                window.location.reload();
+            }
+        }
+        function increaseDecrease2() {
+            user2Point.innerHTML = ++count2;
+            user1Point.innerHTML = --count;
+            if(count2===10){
+                alert('player1 wins');
+                window.location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

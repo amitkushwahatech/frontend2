@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style></style>
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>
+      Write functions to show the sum / difference / product / division of
+      Number 1 and Number 2 in the result field based on the operator selected
+    </h1>
+
+    <div>Number 1: <input type="number" id="number1" /></div>
+    <br />
+    <div>Number 2: <input type="number" id="number2" /></div>
+    <br />
+    <div id="operator">
+      <div>
+        Operator
+      </div>
+      <div id="table">
+        <table>
+          <tr>
+            <td>
+              <input type="button" value="+" id="+" />
+              <input type="button" value="-" id="-" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="" id="" />
+              <input type="button" value="/" id="/" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br />
+    <div>Result: <input type="number" id="result" /></div>
+
+
+    Given bubbles in the form of circles.
+    Task is to create a game such that hovering on a bubble pops it, 
+    that is, makes dissappear, and a text saying “pop” appears in it’s place. 
+    Once all bubbles have been popped, make all “pop” texts disappear and display a message saying: 
+    “Wow! All bubbles popped
+    Playground for grid: https://githubbox.com/Mrityunjay3/frontend2_mock_popbubbles
+
+
+    <script>
+      // Write your code here
+      // Getting inputs
+      let num1 = document.getElementById("number1")
+      let num2 = document.getElementById("number2")
+
+      // Getting buttons
+      let plusbtn = document.getElementById("+")
+      let minbtn = document.getElementById("-")
+      let mulbtn = document.getElementById("*")
+      let divbtn = document.getElementById("/")
+
+      // Result
+      let result = document.getElementById("result")
+
+      // Addition function
+      plusbtn.addEventListener("click", addition)
+      function addition()
+      {
+        let n1val = num1.value;
+        let n2val = num2.value;
+
+        let sum = Number(n1val) + Number(n2val);
+        // console.log(sum)
+        result.value = sum;
+      }
+
+    //   console.log(plusbtn);
+
+    minbtn.addEventListener("click", subtraction)
+    function subtraction()
+    {
+        let n1val = num1.value;
+        let n2val = num2.value;
+
+        let sub = Number(n1val) - Number(n2val);
+        // console.log(sum)
+        result.value = sub;
+    }  
+
+    </script>
+  </body>
+</html>
